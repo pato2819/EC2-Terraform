@@ -13,9 +13,9 @@ terraform {
 #provider block
 #En este bloque se encuentra las credenciales de acceso al proveedor ( en este caso aws https://registry.terraform.io/providers/hashicorp/aws/latest/docs#authentication)
 provider "aws" {
-  access_key = AWS_ACCESS_KEY_ID
-  secret_key = AWS_SECRET_ACCESS_KEY
-  region     = var.aws_region
-  profile    = "default"
+  access_key = $AWS_ACCESS_KEY_ID
+  secret_key = $AWS_SECRET_ACCESS_KEY
+  region  = var.aws_region
+  profile = "default"
 }
 
