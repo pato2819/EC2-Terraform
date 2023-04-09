@@ -13,6 +13,6 @@ terraform {
 #provider block
 #En este bloque se encuentra las credenciales de acceso al proveedor ( en este caso aws https://registry.terraform.io/providers/hashicorp/aws/latest/docs#authentication)
 provider "aws" {
-  shared_config_files = [ "/home/.aws/config" ]
-  shared_credentials_files = [ "/home/.aws/credentials" ]
+  shared_config_files = [ "/home/ec2-user/.aws/config" ]
+  shared_credentials_files = [ "//home/ec2-user/.aws/credentials" ]
 }
