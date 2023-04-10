@@ -1,7 +1,7 @@
 variable "aws_region" {
   description = "region donde se trabaja el proyecto"
   type        = string
-  default     = "us-east-2"
+  default     = "us-west-1"
 }
 
 variable "instance_type" {
