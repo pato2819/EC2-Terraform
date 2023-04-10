@@ -98,3 +98,15 @@ resource "aws_instance" "instance_1" {
     Name = "instance_1"
   }
 }
+
+resource "aws_instance" "instance_2" {
+  ami                    = data.aws_ami.amazon_linux2.id
+  instance_type          = var.instance_type
+  subnet_id              = aws_subnet.subnet_publica.id
+  vpc_security_group_ids = [aws_security_group.vpc-ssh.id, aws_security_group.vpc-web.id]
+
+  tags = {
+    Name = "instance_2"
+  }
+}
+
